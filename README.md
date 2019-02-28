@@ -3,5 +3,5 @@ My dream for this project is to be able to answer my phone calls on my PC and co
 # Progress
 - Incoming call GUI done
 #Screenshots
-<img src="https://github.com/elibroftw/AnswerCallFromPC/blob/master/Screenshots/Screenshot%201.jpg" alt="Screenshot" height="600px"/>
+<img src="https://github.com/elibroftw/AnswerCallFromPC/blob/master/Screenshots/Screenshot%201.jpg" alt="Screenshot"/>
 <img src="https://github.com/elibroftw/AnswerCallFromPC/blob/master/Screenshots/Screenshot%202.jpg" alt="Screenshot" height="300px"/>
