@@ -1,0 +1,35 @@
+﻿<Window x:Class="AnswerCallFromPC.CurrentCallWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnswerCallFromPC"
+        mc:Ignorable="d"
+        WindowStartupLocation="Manual"
+        Background="#141414"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        BorderBrush="White"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        Title="Current Call" Height="400" Width="300">
+    <Grid>
+        <StackPanel>
+            <!--<Image Width="100" Height="100" BorderThickness="0" Margin="60"></Image>-->
+            <Button Width="100" Height="100" BorderThickness="0" Margin="40">Image</Button>
+            <TextBlock Margin="0, 10, 0, 20" Name="CallerNameTextBlock" FontSize="30" TextWrapping="Wrap" TextAlignment="Center" Width="280" Foreground="#C8C8C8">Caller ID</TextBlock>
+            <Button Width="70" Height="70" BorderThickness="0" Margin="40" Background="RED" Click="EndCall">
+                <TextBlock FontSize="90" Height="140" VerticalAlignment="Center">&#xd7;</TextBlock>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="Red"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

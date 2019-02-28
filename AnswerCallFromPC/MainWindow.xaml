@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnswerCallFromPC"
         mc:Ignorable="d"
-        Title="WINDOW TITLE" Height="810" Width="1440"
+        Title="WINDOW TITLE" Height="600" Width="420"
         WindowStartupLocation="CenterScreen">
     <Grid Name="pnlMainGrid" MouseUp="pnlMainGrid_MouseUp" Background="#1B1B1B">
         <StackPanel>

@@ -32,8 +32,8 @@ namespace AnswerCallFromPC
             Left = SystemParameters.PrimaryScreenWidth - Width;
             double ratio = SystemParameters.PrimaryScreenHeight / System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
             Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height * ratio - Height;
-            //int TaskBarHeight = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height - System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height;
             Topmost = true;
+            //int TaskBarHeight = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height - System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height;
             Thickness margin = CallerNameTextBlock.Margin;
             if (CallerName.Count(f => f == ' ') > 1)
             {
@@ -49,8 +49,8 @@ namespace AnswerCallFromPC
         private void AcceptCall(object sender, RoutedEventArgs e)
         {
             snd.Stop();
-            // Connect Mic and transmit audio like that
-            // spawn new window with call shit
+            Window CurrentCallWindow = new CurrentCallWindow(CallerNameTextBlock.Text);
+            CurrentCallWindow.Show();
             Close();
         }
 
