@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
@@ -19,7 +20,7 @@ namespace AnswerCallFromPC
     /// Interaction logic for Window2.xaml
     /// </summary>
     /// When renaming files, make sure first line in XAML reflects the change
-    
+
     public partial class IncomingCallWindow : Window
     {
 
@@ -28,8 +29,10 @@ namespace AnswerCallFromPC
         public IncomingCallWindow(String CallerName)
         {
             InitializeComponent();
-            this.Left = SystemParameters.PrimaryScreenWidth - this.Width;
-            this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height - this.Height;
+            Left = SystemParameters.PrimaryScreenWidth - Width;
+            double ratio = SystemParameters.PrimaryScreenHeight / System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+            Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height * ratio - Height;
+            //int TaskBarHeight = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height - System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height;
             Topmost = true;
             Thickness margin = CallerNameTextBlock.Margin;
             if (CallerName.Count(f => f == ' ') > 1)
@@ -38,11 +41,9 @@ namespace AnswerCallFromPC
             }
             CallerNameTextBlock.Margin = margin;
             CallerNameTextBlock.Text = CallerName;
-            snd.PlayLooping();
-            // play audio on repeat
+            //snd.PlayLooping();  // plays audio on repeat
             // add volume options in settings
             // add that frosted glass look later
-
         }
 
         private void AcceptCall(object sender, RoutedEventArgs e)
@@ -55,9 +56,8 @@ namespace AnswerCallFromPC
 
         private void DeclineCall(object sender, RoutedEventArgs e)
         {
-            // Tell Android to end the call
             snd.Stop();
-            // do something
+            // Tell Android to end the call
             Close();
         }
 
