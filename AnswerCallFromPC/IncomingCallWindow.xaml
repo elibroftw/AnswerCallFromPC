@@ -1,0 +1,31 @@
+﻿<Window x:Class="AnswerCallFromPC.IncomingCallWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnswerCallFromPC"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="Manual"
+        Background="#141414"
+        AllowsTransparency="True"
+        BorderBrush="White"
+        Title="Incoming Call" Height="170" Width="400">
+    <Grid>
+        <StackPanel>
+            <TabPanel Margin="0, 0, 0, 0">
+                <Button Width="120" Height="120" BorderThickness="0">Image</Button>
+                <!--<Image Width="100" Height="100"></Image>-->
+                <StackPanel Height="120">
+                    <TextBlock Margin="0, 5, 0, 0" FontSize="15" TextWrapping="NoWrap" TextAlignment="Center" Width="280" Foreground="#C8C8C8"><Run Text="Incoming call"/></TextBlock>
+                    <TextBlock Margin="0, 20, 0, 0" Name="CallerNameTextBlock" FontSize="30" TextWrapping="Wrap" TextAlignment="Center" Width="280" Foreground="#C8C8C8"><Run Text="Caller ID"/></TextBlock>
+                </StackPanel>
+            </TabPanel>
+            <TabPanel>
+                <Button Content="Answer" Height="50" Width="200" Background="#01FF02" Foreground="Black" FontSize="20" FontWeight="Medium" BorderThickness="0" Click="AcceptCall"></Button>
+                <Button Content="Reject" Height="50" Width="200" Background="#FE0002" Foreground="Black" FontSize="20" FontWeight="Medium" BorderThickness="0" Click="DeclineCall"></Button>
+            </TabPanel>
+            <!--<#1B1B1B>-->
+        </StackPanel>
+    </Grid>
+</Window>
