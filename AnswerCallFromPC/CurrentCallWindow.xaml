@@ -16,7 +16,16 @@
     <Grid>
         <StackPanel>
             <!--<Image Width="100" Height="100" BorderThickness="0" Margin="60"></Image>-->
-            <Button Width="100" Height="100" BorderThickness="0" Margin="40">Image</Button>
+                <Button Width="95" Height="95" BorderThickness="0" Content="Image" Margin="40">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="AliceBlue"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
             <TextBlock Margin="0, 10, 0, 20" Name="CallerNameTextBlock" FontSize="30" TextWrapping="Wrap" TextAlignment="Center" Width="280" Foreground="#C8C8C8">Caller ID</TextBlock>
             <Button Width="70" Height="70" BorderThickness="0" Margin="40" Background="RED" Click="EndCall">
                 <TextBlock FontSize="90" Height="140" VerticalAlignment="Center">&#xd7;</TextBlock>
