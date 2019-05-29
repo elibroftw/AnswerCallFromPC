@@ -105,7 +105,7 @@
     <Compile Include="CurrentCallWindow.xaml.cs">
       <DependentUpon>CurrentCallWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="TextBlocksExamples.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -113,8 +113,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="TextBlocksExamples.xaml.cs">
+      <DependentUpon>TextBlocksExamples.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="IncomingCallWindow.xaml">
