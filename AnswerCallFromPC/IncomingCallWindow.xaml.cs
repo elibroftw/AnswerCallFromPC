@@ -41,7 +41,7 @@ namespace AnswerCallFromPC
             }
             CallerNameTextBlock.Margin = margin;
             CallerNameTextBlock.Text = CallerName;
-            //snd.PlayLooping();  // plays audio on repeat
+            snd.PlayLooping();  // plays audio on repeat
             // add volume options in settings
             // add that frosted glass look later
         }
